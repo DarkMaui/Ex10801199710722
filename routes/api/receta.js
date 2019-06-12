@@ -47,7 +47,25 @@ router.post('/',(req, res, next)=>{
 
     res.status(200).json(newElement);
 
-}); 
+});
+
+router.put('/:id',(req, res, next)=>{
+    var id = req.params.id;
+    var modifiedReceta = {};
+    var originalReceta = {};
+
+    recetaCollection = recetaCollection.map((e,i)=>{
+        if(e.id == id){
+            originalReceta = Object.assign({}, e);
+            return modifiedReceta = Object.assign({}, e, req.body);
+        }
+        return e;
+
+    });
+
+    res.status(200).json({ "Antiguo": originalReceta, "Nuevo" : modifiedReceta});
+
+});
 
 
 
