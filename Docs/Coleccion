@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "db179776-9edf-4500-a202-9670327bb61e",
+		"name": "Examen",
+		"description": "Get, put, post, delete",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/receta/4c1ed470-59b2-4e48-b514-3443e6b200f8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/receta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"receta"
+					]
+				},
+				"description": "Get general y por codigo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/receta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "receta",
+							"value": "gabroral",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": " pastilla",
+							"type": "text"
+						},
+						{
+							"key": "observacion",
+							"value": "estomago",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": " activo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/receta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"receta"
+					]
+				},
+				"description": "Post correcto"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/receta/92bffc13-f77e-4a1b-ad23-05f53dcb06a0",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "precio",
+							"value": "43",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/receta/d6d092f0-1a07-46d6-87e2-24cee78030f0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"receta",
+						"d6d092f0-1a07-46d6-87e2-24cee78030f0"
+					]
+				},
+				"description": "Put correcto"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/receta/79c19589-94bb-43f2-a5d4-6ec55f0d928c",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/receta/79c19589-94bb-43f2-a5d4-6ec55f0d928c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"receta",
+						"79c19589-94bb-43f2-a5d4-6ec55f0d928c"
+					]
+				},
+				"description": "Delete completo"
+			},
+			"response": []
+		}
+	]
+}
