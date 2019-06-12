@@ -68,9 +68,21 @@ router.put('/:id',(req, res, next)=>{
 });
 
 
+router.delete('/:id',(req, res, next)=>{
+    var id = req.params.id;
+    var deleteReceta= {};
+    recetaCollection = recetaCollection.filter((e,i)=>{
+        if(e.id == id){
+
+            deleteReceta = Object.assign({},e);
+            return false;
 
 
+        }
+        return true;
+    });
 
-
+    res.status(200).json({"Eliminada":deleteReceta, "General":recetaCollection});
+});
 
 module.exports = router;
