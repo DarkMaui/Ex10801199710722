@@ -40,6 +40,17 @@ router.get('/:id', (req, res, next)=>{
 
     });
 
+    
+router.post('/',(req, res, next)=>{
+    var newElement = Object.assign({},recetaStruct,{"id":uuid()}, req.body);
+    recetaCollection.push(newElement);
+
+    res.status(200).json(newElement);
+
+}); 
+
+
+
 
 
 
